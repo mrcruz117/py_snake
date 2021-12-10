@@ -3,6 +3,11 @@ from snake import Snake
 import time
 
 screen = Screen()
+
+rootwindow = screen.getcanvas().winfo_toplevel()
+rootwindow.call('wm', 'attributes', '.', '-topmost', '1')
+rootwindow.call('wm', 'attributes', '.', '-topmost', '0')
+
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("My Snake Game")
